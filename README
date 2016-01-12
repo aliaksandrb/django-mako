@@ -1,15 +1,19 @@
 ================================================================================
 django-mako
 ================================================================================
-This module provides a drop in replacement of Django templates for Mako 
-Templates.
+This module provides a drop in replacement of Django templates for
+Mako Templates.
 
 Django: http://www.djangoproject.com/
 Mako: http://www.makotemplates.org/
+
+Forked from: https://github.com/tuxdna/django-mako
+
+The only difference from the original repo is added support of Django
+template context processors.
 
 ================================================================================
 How to install?
 ================================================================================
 
  $ sudo python setup.py install
-

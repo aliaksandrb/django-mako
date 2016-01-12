@@ -25,6 +25,13 @@ def render_to_string(template_name, dictionary, context_instance=None):
     context_dictionary = {}
     for d in context_instance:
         context_dictionary.update(d)
+
+    # support for template processors
+    request_context = middleware.get_template_request_context()
+    if request_context:
+        for item in request_context:
+            context_dictionary.update(item)
+
     # fetch and render template
     template = middleware.lookup.get_template(template_name)
     return template.render(**context_dictionary)
